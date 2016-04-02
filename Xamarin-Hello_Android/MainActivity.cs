@@ -19,9 +19,11 @@ namespace XamarinHello_Android
 			// Get our button from the layout resource,
 			// and attach an event to it
 			Button button = FindViewById<Button> (Resource.Id.myButton);
-			
+
+			string hello = GetString (Resource.String.hello);
+
 			button.Click += delegate {
-				button.Text = string.Format ("{0} clicks!", count++);
+				button.Text = string.Format ("{0}\n{1} clicks!", hello, count++);
 			};
 		}
 	}
